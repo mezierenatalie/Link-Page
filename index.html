@@ -239,30 +239,6 @@
             margin-bottom: 0.85rem; /*adds 0.85rem (scalable with font size) of margin below the text*/
         }
 
-        /* Uses stored CSS variables and applies them to the progress label text*/
-        .progress-label {
-            font-size: 11px; /*sets the font height to 11px*/
-            color: var(--maintextcolor); /*sets the text color to "maintextcolor" (dark grey crimson)*/
-            margin-bottom: 5px; /*adds 5px of margin below the text*/
-            font-weight: 400; /*sets the font width to 400*/
-        }
-
-        /* Uses stored CSS variables and applies them to the progress track*/
-        .progress-track {
-            height: 5px; /*sets the height of the progress tracking line to 5px*/
-            background: var(--accentcolor); /*sets the color of the progress tracking line to "accentcolor" (grey crimson)*/
-            border-radius: 99px; /*sets the progress track border radius to 99px*/
-            overflow: hidden; /*hides the progress bar if it goes past the progress track*/
-        }
-
-        /* Uses stored CSS variables and applies them to the progress bar*/
-        .progress-bar {
-            height: 100%; /*sets the height to 100% of the parent track*/
-            background: var(--maintextcolor); /*sets the progress bar color to "maintextcolor" (dark grey crimson)*/
-            border-radius: 99px; /*sets the progress bar border radius to 99px*/
-            transition: width 0.8s ease; /*animates the progress bar to move at 0.8s*/
-        }
-
         /* Uses stored CSS variables and applies them to the cta*/
         .cta {
             margin-top: 0.85rem; /*adds 0.85rem (scalable with font size) of margin above the text*/
@@ -473,10 +449,6 @@
                       <div class="reading-tag"><span class="reading-dot"></span>Reading now</div>
                       <h1 class="title">${book.title}</h1>
                       <p class="author">by ${book.author}</p>
-                      <p class="progress-label">Progress</p>
-                      <div class="progress-track">
-                        <div class="progress-bar" style="width:45%"></div>
-                      </div>
                       <p class="cta">View on Goodreads
                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M2.5 9.5L9.5 2.5M9.5 2.5H4.5M9.5 2.5V7.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
