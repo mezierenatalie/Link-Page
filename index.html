@@ -4,477 +4,567 @@
 <!-- Sets the page language to english, and is important for screen readers -->
 <html lang="en">
 
-<!-- Opens the head section of the code, it is behind the scenes instructinos for the browser and includes the style section of the code-->
+<!-- Opens the head section of the code, it is behind the scenes instructions for the browser and includes the style section of the code-->
 <head>
 
-<!-- Sets the character set to the default UTF-8 so that none of the text characters display as weird symbols -->
-<meta charset="UTF-8">
+    <!-- Sets the character set to the default UTF-8 so that none of the text characters display as weird symbols -->
+    <meta charset="UTF-8">
 
-<!-- Makes the page responsive on mobile and auto fits the page to the devices width -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Makes the page responsive on mobile and auto fits the page to the devices width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Page title that displays on the browser tab -->
-<title>Natalie's Links</title>
+    <!-- Page title that displays on the browser tab -->
+    <title>Natalie's Links</title>
 
-<!-- Preconnects to the font server so that the fonts can load faster -->
-<link rel="preconnect" href="https://db.onlinewebfonts.com">
+    <!-- Preconnects to the font server so that the fonts can load faster -->
+    <link rel="preconnect" href="https://db.onlinewebfonts.com">
 
-<!-- Loads the font "Genty Sans" from the font server -->
-<link href="https://db.onlinewebfonts.com/c/fea031a5eb1f633a622138fe25624d42?family=Genty+Sans" rel="stylesheet">
+    <!-- Loads the font "Genty Sans" from the font server -->
+    <link href="https://db.onlinewebfonts.com/c/fea031a5eb1f633a622138fe25624d42?family=Genty+Sans" rel="stylesheet">
 
-<!-- Opens the style section of the code, this sets the design elements for the web page -->
-<style>
-    /* Resets "*" everything  on the page, everything in ::before, and ::after. Makes the box sizing consistent by forcing padding to be added inside the elements set width. Then changes margin and padding to "0" to remove any page defaults*/
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    <!-- Opens the style section of the code, this sets the design elements for the web page -->
+    <style>
+        /* Resets "*" everything  on the page, everything in ::before, and ::after. Makes the box sizing consistent by forcing padding to be added inside the elements set width. Then changes margin and padding to "0" to remove any page defaults*/
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-  /* Stores CSS variables for the whole page and is accessed using "var(--nameofvariable)"*/
-  :root {
-    --bgcolor: #f6dfe2; /*light red*/
-    --maintextcolor: #3d292f; /*dark grey crimson*/
-    --textcolor: #ffffff; /*white*/
-    --indicatorcolor: #ffffff; /*white*/
-    --accentcolor: #754f5b; /*grey crimson*/
-    --cardbg: #ffffff; /*white*/
-    --border: #3d292f; /*dark grey crimson*/
-    /*layers two shadow boxes on top of eachother to make a shadow gradient, used on card and button elements using "var(--shadow)"*/
-    --shadow: 0 2px 24px rgba(26,22,18,0.08) /*0 horizontal offset, 2px offset down, 24px shadow width, the larger the number the softer the shadow, at 8% opacity*/,
-    0 1px 4px rgba(26,22,18,0.06) /*0 horizontal offset, 1px offset down, 4px shadow width, at 6% opacity*/;
-  }
+        /* Stores CSS variables for the whole page and is accessed using "var(--nameofvariable)"*/
+        :root {
+            --bgcolor: #f6dfe2; /*light red*/
+            --maintextcolor: #3d292f; /*dark grey crimson*/
+            --textcolor: #ffffff; /*white*/
+            --indicatorcolor: #ffffff; /*white*/
+            --accentcolor: #754f5b; /*grey crimson*/
+            --cardbg: #ffffff; /*white*/
+            --border: #3d292f; /*dark grey crimson*/
+            /*layers two shadow boxes on top of each other to make a shadow gradient, used on card and button elements using "var(--shadow)"*/
+            --shadow: 0 2px 24px rgba(26,22,18,0.08) /*0 horizontal offset, 2px offset down, 24px shadow width, the larger the number the softer the shadow, at 8% opacity*/, 0 1px 4px rgba(26,22,18,0.06) /*0 horizontal offset, 1px offset down, 4px shadow width, at 6% opacity*/;
+        }
 
-    /* Uses stored CSS variables and applies them to the whole page*/
-    body {
-        font-family: 'Genty Sans'; /*sets the font to "Genty Sans"*/
-        background: var(--bgcolor); /*sets the background page color to "bgcolor" (light red)*/
-        min-height: 100vh; /*sets the minimium height to 100% of the screen height (viewport hieght)*/
-        display: flex; /*sets the display to a flex box so you can control how child elements are arrranged inside the body*/
-        /*centers content on the horizontal (align-items) and vertical (justify-content) axises*/
-        align-items: center;
-        justify-content: center;
-        padding: 2rem 1.25rem; /*sets top/bottom padding to 2rem, and left/right padding to 1.25rem. rem is scalable based on font size*/
-        /*adds a repeating geometric pattern to the page background, the pattern tile is 60px x 60px and repeats across the page. Sets the color of the geometric pattern to #3d292f (%23=#), and the opacity to 5%*/
-        background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%233d292f' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-    }
+        /* Uses stored CSS variables and applies them to the whole page*/
+        body {
+            font-family: 'Genty Sans'; /*sets the font to "Genty Sans"*/
+            background: var(--bgcolor); /*sets the background page color to "bgcolor" (light red)*/
+            min-height: 100vh; /*sets the minimum height to 100% of the screen height (viewport height)*/
+            display: flex; /*sets the display to a flex box so you can control how child elements are arranged inside the body*/
+            /*centers content on the horizontal (align-items) and vertical (justify-content) axises*/
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1.25rem; /*sets top/bottom padding to 2rem, and left/right padding to 1.25rem. rem is scalable based on font size*/
+            /*adds a repeating geometric pattern to the page background, the pattern tile is 60px x 60px and repeats across the page. Sets the color of the geometric pattern to #3d292f (%23=#), and the opacity to 5%*/
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%233d292f' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
 
-   /* Uses stored CSS variables and applies them to the "wrapper"*/
-  .wrapper {
-    /*sets the width to 100% of the max width (420px)*/
-    width: 100%; 
-    max-width: 420px;
-  }
+        /* Uses stored CSS variables and applies them to the "wrapper"*/
+        .wrapper {
+            /*sets the width to 100% of the max width (420px)*/
+            width: 100%;
+            max-width: 420px;
+        }
 
-   /* Uses stored CSS variables and applies them to the "link subtitle" text*/
-  .linksubtitle {
-    font-family: 'Genty Sans'; /*sets the font to "Genty Sans"*/
-    font-size: 20px; /*sets the font height to 20px*/
-    font-weight: 500; /*sets the font width to 500*/
-    letter-spacing: 0.18em; /*sets the spacing between letters to 0.18em which is scaleable based on font size*/
-    text-transform: uppercase; /*changes the text to be all uppercase*/
-    color: var(--maintextcolor); /*sets the text color to "maintextcolor" (dark grey crimson*/
-    text-align: center; /*centers the text horizontially*/
-    margin-bottom: 1rem; /*adds 1rem (scaleable with font size) of margin below the text*/
-    margin-top: 1rem; /*adds 1rem (scaleable with font size) of margin above the text*/
-    display: flex; /*sets the display to a flex box so you can control how child elements are arrranged inside the body*/
-    align-items: center; /*centers content horizontally*/
-    gap: 10px; /*adds a gap of 10 px before and after the subtitle text*/
-  }
+        /* Uses stored CSS variables and applies them to the "link subtitle" text*/
+        .linksubtitle {
+            font-family: 'Genty Sans'; /*sets the font to "Genty Sans"*/
+            font-size: 20px; /*sets the font height to 20px*/
+            font-weight: 500; /*sets the font width to 500*/
+            letter-spacing: 0.18em; /*sets the spacing between letters to 0.18em which is scalable based on font size*/
+            text-transform: uppercase; /*changes the text to be all uppercase*/
+            color: var(--maintextcolor); /*sets the text color to "maintextcolor" (dark grey crimson)*/
+            text-align: center; /*centers the text horizontally*/
+            margin-bottom: 1rem; /*adds 1rem (scalable with font size) of margin below the text*/
+            margin-top: 1rem; /*adds 1rem (scalable with font size) of margin above the text*/
+            display: flex; /*sets the display to a flex box so you can control how child elements are arranged inside the body*/
+            align-items: center; /*centers content vertically*/
+            gap: 10px; /*adds a gap of 10 px before and after the subtitle text*/
+        }
 
-   /* Uses stored CSS variables and applies them before and after the "link subtitle" text*/
-  .linksubtitle::before, .linksubtitle::after {
-    content: ''; /*indicates that there is conent to show*/
-    flex: 1; /*tells the flex display to fill the space evenly on both sides of the text with the content*/
-    height: 2px; /*sets the height of the content to 2px*/
-    background: var(--border); /*sets the color to "border" (dark grey crimson)*/
-  }
+        /* Uses stored CSS variables and applies them before and after the "link subtitle" text*/
+        .linksubtitle::before, .linksubtitle::after {
+            content: ''; /*indicates that there is content to show*/
+            flex: 1; /*tells the flex display to fill the space evenly on both sides of the text with the content*/
+            height: 2px; /*sets the height of the content to 2px*/
+            background: var(--border); /*sets the color to "border" (dark grey crimson)*/
+        }
 
-  /* ── loading state style ── */
-   /* Uses stored CSS variables and applies them to a skeleton variable to show while information is loading*/
-  .skeleton {
-    background: var(--cardbg); /*sets the skeleton card backround to "cardbg" (white)*/
-    border-radius: 16px; /*sets the skeleton card border radius to 16px*/
-    padding: 1.75rem; /*adds 1.75rem (scaleable with font size) of padding in the skeleton card*/
-    box-shadow: var(--shadow); /*adds the shadow style variable to the skeleton card*/
-    border: 0.5px solid var(--border); /*adds a 0.5px solid border to the skeleton card using "border" color (dark grey crimson)*/
-  }
+        /* ── loading state style ── */
+        /* Uses stored CSS variables and applies them to a skeleton variable to show while information is loading*/
+        .skeleton {
+            background: var(--cardbg); /*sets the skeleton card background to "cardbg" (white)*/
+            border-radius: 16px; /*sets the skeleton card border radius to 16px*/
+            padding: 1.75rem; /*adds 1.75rem (scalable with font size) of padding in the skeleton card*/
+            box-shadow: var(--shadow); /*adds the shadow style variable to the skeleton card*/
+            border: 0.5px solid var(--border); /*adds a 0.5px solid border to the skeleton card using "border" color (dark grey crimson)*/
+        }
 
-    /* Uses stored CSS variables and applies them to a skeleton line variable to animate while information is loading*/
-  .skel-line {
-    background: linear-gradient(90deg, #ede9e4 25%, #f5f2ef 50%, #ede9e4 75%); /*sets the skeleton line backround color to a linear gradient of different light grey colors at different opacities*/
-    background-size: 200% 100%; /*sets the size of the skeleton line content*/
-    animation: shimmer 1.4s infinite; /*adds a shimmer animation that loops every 1.4s and never stops to indicate "loading" content*/
-    border-radius: 4px; /*sets the skeleton line border radius to 4px*/
-  }
-  @keyframes shimmer { to { background-position: -200% 0; } } /*adds the shimmer animation frames*/
+        /* Uses stored CSS variables and applies them to a skeleton line variable to animate while information is loading*/
+        .skel-line {
+            background: linear-gradient(90deg, #ede9e4 25%, #f5f2ef 50%, #ede9e4 75%); /*sets the skeleton line background color to a linear gradient of different light grey colors at different opacities*/
+            background-size: 200% 100%; /*sets the size of the skeleton line content*/
+            animation: shimmer 1.4s infinite; /*adds a shimmer animation that loops every 1.4s and never stops to indicate "loading" content*/
+            border-radius: 4px; /*sets the skeleton line border radius to 4px*/
+        }
+            /*adds the shimmer animation frames*/
+            @keyframes shimmer {
+                to {
+                    background-position: -200% 0;
+                }
+            }
 
-  /* ── book card style ── */
-   /* Uses stored CSS variables and applies them to the book card*/
-  .card {
-    background: var(--cardbg); /*sets the book card background to "cardbg" (white)*/
-    border-radius: 16px; /*sets the card border radius to 16px*/
-    padding: 1.75rem; /*adds 1.75rem (scaleable with font size) of padding in the book card*/
-    box-shadow: var(--shadow); /*adds the shadow style variable to the book card*/
-    border: 0.5px solid var(--border); /*adds a 0.5px solid border to the book card using "border" color (dark grey crimson)*/
-    display: flex; /*sets the display to a flex box so you can control how child elements are arrranged inside the card*/
-    gap: 1.25rem; /*adds a gap of 1.25rem (scaleable with font size) to the book card*/
-    align-items: flex-start; /*aligns content horizontally to the right*/
-    opacity: 0; /*sets the opacity of the card to 0, makes the card solid*/
-    transform: translateY(12px); /*moves the card along the y axis by 12px*/
-    animation: fadeUp 0.5s ease forwards; /*adds an animation to the book card so it takes 0.5s to fade up on the screen and ease forward*/
-    text-decoration: none; /*sets the text decoration to none. This removes defaults like hyperlink lines*/
-    color: inherit; /*uses text color from the parent element*/
-    transition: box-shadow 0.2s, transform 0.2s; /*adds animation to the book card shadow*/
-  }
+        /* ── book card style ── */
+        /* Uses stored CSS variables and applies them to the book card*/
+        .card {
+            background: var(--cardbg); /*sets the book card background to "cardbg" (white)*/
+            border-radius: 16px; /*sets the card border radius to 16px*/
+            padding: 1.75rem; /*adds 1.75rem (scalable with font size) of padding in the book card*/
+            box-shadow: var(--shadow); /*adds the shadow style variable to the book card*/
+            border: 0.5px solid var(--border); /*adds a 0.5px solid border to the book card using "border" color (dark grey crimson)*/
+            display: flex; /*sets the display to a flex box so you can control how child elements are arranged inside the card*/
+            gap: 1.25rem; /*adds a gap of 1.25rem (scalable with font size) to the book card*/
+            align-items: flex-start; /*aligns content to the top left corner*/
+            opacity: 0; /*sets the opacity of the card to 0, makes the card invisible until it fades up and opacity becomes 1, solid*/
+            transform: translateY(12px); /*moves the card along the y axis by 12px*/
+            animation: fadeUp 0.5s ease forwards; /*adds an animation to the book card so it takes 0.5s to fade up on the screen and ease forward*/
+            text-decoration: none; /*sets the text decoration to none. This removes defaults like hyperlink lines*/
+            color: inherit; /*uses text color from the parent element*/
+            transition: box-shadow 0.2s, transform 0.2s; /*adds animation to the book card shadow*/
+        }
 
-   /* Uses stored CSS variables and applies them to the book card when it is hovered over*/
-    .card:hover {
-        box-shadow: 0 6px 32px rgba(26,22,18,0.13), 0 2px 6px rgba(26,22,18,0.08); /*increases the shadow size and opacity when hovered over to make the card appear to lift off the page*/
-        transform: translateY(-2px); /*moves the card 2px upward when hovered over to make the card appear to lift off the page*/
-    }
-  @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } } /*adds the fadeup animation frames*/
+        /* Uses stored CSS variables and applies them to the book card when it is hovered over*/
+        .card:hover {
+            box-shadow: 0 6px 32px rgba(26,22,18,0.13), 0 2px 6px rgba(26,22,18,0.08); /*increases the shadow size and opacity when hovered over to make the card appear to lift off the page*/
+            transform: translateY(-2px); /*moves the card 2px upward when hovered over to make the card appear to lift off the page*/
+        }
+            /*adds the fadeup animation frames*/
+            @keyframes fadeUp {
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
 
-   /*addcomment*/
-  .cover-wrap {
-    flex-shrink: 0; /*prevents the cover image container from shrinking if space gets tight, keeps the book cover always the same size*/
-    position: relative; /*sets the positioning context for any child elements that might need to be positioned absolutely inside it*/
-  }
+        /* Uses stored CSS variables and applies them to the "cover wrap"*/
+        .cover-wrap {
+            flex-shrink: 0; /*prevents the cover image container from shrinking if space gets tight, keeps the book cover always the same size*/
+            position: relative; /*sets the positioning context for any child elements that might need to be positioned absolutely inside it*/
+        }
 
-   /* Uses stored CSS variables and applies them to the book cover image*/
-    .cover {
-        width: 110px; /*sets the cover image width to 110px*/
-        height: 170px; /*sets the cover image height to 170px*/
-        object-fit: cover; /*scales the image to fill its set dimensions (110px x 170px) without stretching or distorting it, crops if necessary*/
-        border-radius: 6px; /*sets the cover image border radius to 6px*/
-        display: block; /*sets the display to a block box*/
-        /*layers two shadow boxes on top of eachother to make a shadow gradient, used on card and button elements using "var(--shadow)"*/
-        box-shadow: 3px 3px 6px rgba(26,22,18,0.18) /*3px horizontal offset, 3px offset down, 6px shadow width, the larger the number the softer the shadow, at 18% opacity*/, -1px 0 0 rgba(26,22,18,0.08) /*-1px horizontal offset, 0px offset down, 0px shadow width, the larger the number the softer the shadow, at 8% opacity*/;
-    }
+        /* Uses stored CSS variables and applies them to the book cover image*/
+        .cover {
+            width: 110px; /*sets the cover image width to 110px*/
+            height: 170px; /*sets the cover image height to 170px*/
+            object-fit: cover; /*scales the image to fill its set dimensions (110px x 170px) without stretching or distorting it, crops if necessary*/
+            border-radius: 6px; /*sets the cover image border radius to 6px*/
+            display: block; /*sets the display to a block box*/
+            /*layers two shadow boxes on top of each other to make a shadow gradient, used on card and button elements using "var(--shadow)"*/
+            box-shadow: 3px 3px 6px rgba(26,22,18,0.18) /*3px horizontal offset, 3px offset down, 6px shadow width, the larger the number the softer the shadow, at 18% opacity*/, -1px 0 0 rgba(26,22,18,0.08) /*-1px horizontal offset, 0px offset down, 0px shadow width, the larger the number the softer the shadow, at 8% opacity*/;
+        }
 
-   /* Uses stored CSS variables and applies them to the book cover placeholder*/
-  .cover-placeholder {
-    width: 110px; /*sets the cover placeholder width to 110px*/
-    height: 170px; /*sets the cover placeholder height to 170px*/
-    background: var(--accentcolor); /*sets the cover placeholder color to "accentcolor" (grey crimson)*/
-    border-radius: 6px; /*sets the cover placeholder border radius to 6px*/
-    display: flex; /*sets the display to a flex box so you can control how child elements are arrranged inside the cover placeholder*/
-    /*centers content on the horizontal (align-items) and vertical (justify-content) axises*/
-    align-items: center;
-    justify-content: center;
-    font-size: 28px; /*sets the font height to 28px*/
-  }
+        /* Uses stored CSS variables and applies them to the book cover placeholder*/
+        .cover-placeholder {
+            width: 110px; /*sets the cover placeholder width to 110px*/
+            height: 170px; /*sets the cover placeholder height to 170px*/
+            background: var(--accentcolor); /*sets the cover placeholder color to "accentcolor" (grey crimson)*/
+            border-radius: 6px; /*sets the cover placeholder border radius to 6px*/
+            display: flex; /*sets the display to a flex box so you can control how child elements are arranged inside the cover placeholder*/
+            /*centers content on the horizontal (align-items) and vertical (justify-content) axises*/
+            align-items: center;
+            justify-content: center;
+            font-size: 28px; /*sets the font height to 28px*/
+        }
 
-   /* Uses stored CSS variables and applies them to the info in the book card*/
-  .info { flex: 1; min-width: 0; } /*lets the info section grow to fill remaining space after the book cover and prevents the text from overflowing outside the card for long titles*/
+        /* Uses stored CSS variables and applies them to the info in the book card*/
+        /*lets the info section grow to fill remaining space after the book cover and prevents the text from overflowing outside the card for long titles*/
+        .info {
+            flex: 1;
+            min-width: 0;
+        }
 
-    /* Uses stored CSS variables and applies them to the reading tag in the book card*/
-  .reading-tag {
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-    font-size: 10px;
-    font-weight: 500;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--textcolor);
-    background: var(--accentcolor);
-    padding: 3px 9px;
-    border-radius: 99px;
-    margin-bottom: 0.6rem;
-  }
+        /* Uses stored CSS variables and applies them to the reading tag in the book card*/
+        .reading-tag {
+            display: inline-flex; /*sets the display to a flex box so you can control how child elements are arranged inside the reading tag*/
+            align-items: center; /*aligns content vertically*/
+            gap: 5px; /*adds a gap of 5px to the reading tag*/
+            font-size: 10px; /*sets the font height to 10px*/
+            font-weight: 500; /*sets the font width to 500*/
+            letter-spacing: 0.1em; /*sets the spacing between letters to 0.1em which is scalable based on font size*/
+            text-transform: uppercase; /*changes the text to be all uppercase*/
+            color: var(--textcolor); /*sets the text color to "textcolor" (white)*/
+            background: var(--accentcolor); /*sets the reading tag color to "accentcolor" (grey crimson)*/
+            padding: 3px 9px; /*adds 3px of padding above/below and 9 px right/left the reading tag*/
+            border-radius: 99px; /*sets the reading tag border radius to 99px*/
+            margin-bottom: 0.6rem; /*adds 0.6rem (scalable with font size) of margin below the text*/
+        }
+        /* Uses stored CSS variables and applies them to the active reading dot*/
+        .reading-dot {
+            width: 5px; /*sets the active reading dot width to 5px*/
+            height: 5px; /*sets the active reading dot height to 5px*/
+            border-radius: 50%; /*sets the active reading dot border radius to 50%*/
+            background: var(--indicatorcolor); /*sets the active reading dot color to "indicatorcolor" (white)*/
+            animation: pulse 2s ease-in-out infinite; /*adds an animation to the active reading dot so it takes 2s to fade the active reading dot in and out*/
+        }
+            /*adds the pulse animation frames*/
+            @keyframes pulse {
+                0%,100% {
+                    opacity: 1;
+                }
 
-  .reading-dot {
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    background: var(--indicatorcolor);
-    animation: pulse 2s ease-in-out infinite;
-  }
-  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.35; } }
+                50% {
+                    opacity: 0.35;
+                }
+            }
 
-  .title {
-    font-family: 'Genty Sans';
-    font-size: 1.05rem;
-    font-weight: 600;
-    line-height: 1.35;
-    color: var(--maintextcolor);
-    margin-bottom: 0.3rem;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
+        /* Uses stored CSS variables and applies them to the book title text*/
+        .title {
+            font-family: 'Genty Sans'; /*sets the font to "Genty Sans"*/
+            font-size: 1.05rem; /*sets the font height to 1.05rem (scalable with font size)*/
+            font-weight: 600; /*sets the font width to 600*/
+            line-height: 1.35; /*sets the line height to 1.35 times the font size*/
+            color: var(--maintextcolor); /*sets the text color to "maintextcolor" (dark grey crimson)*/
+            margin-bottom: 0.3rem; /*adds 0.3rem (scalable with font size) of margin below the text*/
+            /*enables multi-line text clamping and limits the text to 3 lines while hidding anything after 3 lines*/
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
 
-  .author {
-    font-size: 13px;
-    color: var(--maintextcolor);
-    font-weight: 400;
-    margin-bottom: 0.85rem;
-  }
+        /* Uses stored CSS variables and applies them to the book author text*/
+        .author {
+            font-size: 13px; /*sets the font height to 13px*/
+            color: var(--maintextcolor); /*sets the text color to "maintextcolor" (dark grey crimson)*/
+            font-weight: 400; /*sets the font width to 400*/
+            margin-bottom: 0.85rem; /*adds 0.85rem (scalable with font size) of margin below the text*/
+        }
 
-  .progress-label {
-    font-size: 11px;
-    color: var(--maintextcolor);
-    margin-bottom: 5px;
-    font-weight: 400;
-  }
+        /* Uses stored CSS variables and applies them to the progress label text*/
+        .progress-label {
+            font-size: 11px; /*sets the font height to 11px*/
+            color: var(--maintextcolor); /*sets the text color to "maintextcolor" (dark grey crimson)*/
+            margin-bottom: 5px; /*adds 5px of margin below the text*/
+            font-weight: 400; /*sets the font width to 400*/
+        }
 
-  .progress-track {
-    height: 5px;
-    background: var(--accentcolor);
-    border-radius: 99px;
-    overflow: hidden;
-  }
+        /* Uses stored CSS variables and applies them to the progress track*/
+        .progress-track {
+            height: 5px; /*sets the height of the progress tracking line to 5px*/
+            background: var(--accentcolor); /*sets the color of the progress tracking line to "accentcolor" (grey crimson)*/
+            border-radius: 99px; /*sets the progress track border radius to 99px*/
+            overflow: hidden; /*hides the progress bar if it goes past the progress track*/
+        }
 
-  .progress-bar {
-    height: 100%;
-    background: var(--maintextcolor);
-    border-radius: 99px;
-    transition: width 0.8s ease;
-  }
+        /* Uses stored CSS variables and applies them to the progress bar*/
+        .progress-bar {
+            height: 100%; /*sets the height to 100% of the parent track*/
+            background: var(--maintextcolor); /*sets the progress bar color to "maintextcolor" (dark grey crimson)*/
+            border-radius: 99px; /*sets the progress bar border radius to 99px*/
+            transition: width 0.8s ease; /*animates the progress bar to move at 0.8s*/
+        }
 
-  .cta {
-    margin-top: 0.85rem;
-    font-size: 12px;
-    color: var(--maintextcolor);
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    font-weight: 400;
-  }
-  .cta svg { opacity: 0.6; }
+        /* Uses stored CSS variables and applies them to the cta*/
+        .cta {
+            margin-top: 0.85rem; /*adds 0.85rem (scalable with font size) of margin above the text*/
+            font-size: 12px; /*sets the font height to 12px*/
+            color: var(--maintextcolor); /*sets the text color to "maintextcolor" (dark grey crimson)*/
+            display: flex; /*sets the display to a flex box so you can control how child elements are arranged inside the card*/
+            align-items: center; /*centers content vertically*/
+            gap: 4px; /*adds a gap of 4px to the cta*/
+            font-weight: 400; /*sets the font width to 400*/
+        }
+        /*sets the cta opacity to 60%*/
+        .cta svg {
+            opacity: 0.6;
+        }
 
-  /* ── link card ── */
-  .link-button {
-    background: var(--cardbg);
-    border-radius: 16px;
-    padding: 1.75rem;
-    box-shadow: var(--shadow);
-    border: 0.5px solid var(--border);
-    display: flex;
-    gap: 1.25rem;
-    align-items: flex-start;
-    opacity: 0;
-    transform: translateY(12px);
-    animation: fadeUp 0.5s ease forwards;
-    text-decoration: none;
-    color: inherit;
-    transition: box-shadow 0.2s, transform 0.2s;
-    margin-bottom: 0.5rem;
-    margin-top: 0.5rem;
-  }
+        /* ── link card ── */
+        /* Uses stored CSS variables and applies them to the link button*/
+        .link-button {
+            background: var(--cardbg); /*sets the link button background to "cardbg" (white)*/
+            border-radius: 16px; /*sets the link button border radius to 16px*/
+            padding: 1.75rem; /*adds 1.75rem (scalable with font size) of padding in the link button*/
+            box-shadow: var(--shadow); /*adds the shadow style variable to the link button*/
+            border: 0.5px solid var(--border); /*adds a 0.5px solid border to the link button using "border" color (dark grey crimson)*/
+            display: flex; /*sets the display to a flex box so you can control how child elements are arranged inside the card*/
+            gap: 1.25rem; /*adds a gap of 1.25rem (scalable with font size) to the link button*/
+            align-items: flex-start; /*aligns content to the top left corner*/
+            opacity: 0; /*sets the opacity of the card to 0, makes the card invisible until it fades up and opacity becomes 1, solid*/
+            transform: translateY(12px); /*moves the card along the y axis by 12px*/
+            animation: fadeUp 0.5s ease forwards; /*adds an animation to the link button so it takes 0.5s to fade up on the screen and ease forward*/
+            text-decoration: none; /*sets the text decoration to none. This removes defaults like hyperlink lines*/
+            color: inherit; /*uses text color from the parent element*/
+            transition: box-shadow 0.2s, transform 0.2s; /*adds animation to the link button shadow*/
+            margin-bottom: 0.5rem; /*adds 0.5rem (scalable with font size) of margin below the text*/
+            margin-top: 0.5rem; /*adds 0.5rem (scalable with font size) of margin above the text*/
+        }
 
-  .link-button:hover {
-    box-shadow: 0 6px 32px rgba(26,22,18,0.13), 0 2px 6px rgba(26,22,18,0.08);
-    transform: translateY(-2px);
-  }
-  @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+        /* Uses stored CSS variables and applies them to the link button when it is hovered over*/
+        .link-button:hover {
+            box-shadow: 0 6px 32px rgba(26,22,18,0.13), 0 2px 6px rgba(26,22,18,0.08); /*increases the shadow size and opacity when hovered over to make the card appear to lift off the page*/
+            transform: translateY(-2px); /*moves the card 2px upward when hovered over to make the card appear to lift off the page*/
+        }
 
+        /* ── error state ── */
+        /* Uses stored CSS variables and applies them to the error card*/
+        .error-card {
+            background: var(--cardbg); /*sets the error card background to "cardbg" (white)*/
+            border-radius: 16px; /*sets the error card border radius to 16px*/
+            padding: 1.75rem; /*adds 1.75rem (scalable with font size) of padding in the error card*/
+            box-shadow: var(--shadow); /*adds the shadow style variable to the error card*/
+            border: 0.5px solid var(--border); /*adds a 0.5px solid border to the error card using "border" color (dark grey crimson)*/
+            text-align: center; /*centers text*/
+        }
 
-  /* ── error state ── */
-  .error-card {
-    background: var(--cardbg);
-    border-radius: 16px;
-    padding: 1.75rem;
-    box-shadow: var(--shadow);
-    border: 0.5px solid var(--border);
-    text-align: center;
-  }
-  .error-icon { font-size: 2rem; margin-bottom: 0.75rem; }
-  .error-title { font-family: 'Genty Sans'; font-size: 1rem; color: var(--maintextcolor); margin-bottom: 0.4rem; }
-  .error-msg { font-size: 13px; color: var(--maintextcolor); line-height: 1.6; }
-  .error-link { color: var(--accentcolor); text-decoration: underline; }
+        /* Uses stored CSS values and applies them to the error icon*/
+        .error-icon {
+            font-size: 2rem;
+            margin-bottom: 0.75rem;
+        }
 
-  /* ── footer ── */
-  .footer {
-    text-align: center;
-    margin-top: 1rem;
-    font-size: 10px;
-    color: var(--maintextcolor);
-    opacity: 0.7;
-  }
+        /* Uses stored CSS values and applies them to the error title*/
+        .error-title {
+            font-family: 'Genty Sans';
+            font-size: 1rem;
+            color: var(--maintextcolor);
+            margin-bottom: 0.4rem;
+        }
 
-</style>
+        /* Uses stored CSS values and applies them to the error message*/
+        .error-msg {
+            font-size: 13px;
+            color: var(--maintextcolor);
+            line-height: 1.6;
+        }
+
+        /* Uses stored CSS values and applies them to the error link*/
+        .error-link {
+            color: var(--accentcolor);
+            text-decoration: underline;
+        }
+
+        /* ── footer ── */
+        /* Uses stored CSS values and applies them to the footer text*/
+        .footer {
+            text-align: center; /*centers text*/
+            margin-top: 1rem; /*adds 1rem (scalable with font size) of margin above the text*/
+            font-size: 10px; /*sets the font height to 10px*/
+            color: var(--maintextcolor); /*sets the text color to "maintextcolor" (dark grey crimson)*/
+            opacity: 0.7; /*sets opacity to 70%*/
+        }
+    </style>
 </head>
 
+<!-- Opens the body section of the code-->
 <body>
-<div class="wrapper">
-  <div class="linksubtitle">Currently reading</div>
-  <div id="containercurrentlyreading"></div>
-  <p class="footer">via Goodreads &nbsp;·&nbsp; updates automatically</p>
+    <!--Uses the stored CSS variable "wrapper" and applies it to the content and wraps the content to fit the max width-->
+    <div class="wrapper">
+        <!-- Applies the "link subtitle" style to the subtitle text -->
+        <div class="linksubtitle">Currently reading</div>
+        <!-- creates a placeholder container for javascript to fill -->
+        <div id="containercurrentlyreading"></div>
+        <!-- Applies the "footer" style to the footer text -->
+        <p class="footer">via Goodreads &nbsp;·&nbsp; updates automatically</p>
 
-  <div class="linksubtitle">Etsy</div>
-  <div id="containeretsy"></div>
-  <a class="link-button" href="https://www.etsy.com/shop/MeziereMade" target"_blank"> 
-    <img src="https://www.google.com/s2/favicons?domain=www.etsy.com/shop/MeziereMade&sz=32" alt="icon">
-    <span class ="title">Meziere Made - Etsy</span>
-  </a>
+        <!-- Applies the "link subtitle" style to the subtitle text -->
+        <div class="linksubtitle">Etsy</div>
+        <!-- adds the "link button" style to the hyperlink and the "title" style to the display text -->
+        <a class="link-button" href="https://www.etsy.com/shop/MeziereMade" target="_blank">
+            <img src="https://www.google.com/s2/favicons?domain=www.etsy.com/shop/MeziereMade&sz=32" alt="icon">
+            <span class="title">Meziere Made - Etsy</span>
+        </a>
 
-  <div class="linksubtitle">Lights Out</div>
-  <div id="containerlightsout"></div>
-  <a class="link-button" href="https://www.audubon.org/texas/projects/lights-out-texas" target"_blank"> 
-    <img src="https://www.google.com/s2/favicons?domain=www.audubon.org/texas/projects/lights-out-texas&sz=32" alt="icon">
-    <span class ="title">Lights Out Texas</span>
-  </a>
+        <!-- Applies the "link subtitle" style to the subtitle text -->
+        <div class="linksubtitle">Lights Out</div>
+        <!-- adds the "link button" style to the hyperlink and the "title" style to the display text -->
+        <a class="link-button" href="https://www.audubon.org/texas/projects/lights-out-texas" target="_blank">
+            <img src="https://www.google.com/s2/favicons?domain=www.audubon.org/texas/projects/lights-out-texas&sz=32" alt="icon">
+            <span class="title">Lights Out Texas</span>
+        </a>
 
-  <div class="linksubtitle">Vulture Awareness</div>
-  <div id="containervultureawareness"></div>
-  <a class="link-button" href="https://vultureday.org/" target"_blank"> 
-    <img src="https://www.google.com/s2/favicons?domain=www.vultureday.org/&sz=32" alt="icon">
-    <span class ="title">International Vulture Awareness Day</span>
-  </a>
-  <a class="link-button" href="https://www.hawk-conservancy.org/ivad" target"_blank"> 
-    <img src="https://www.google.com/s2/favicons?domain=www.hawk-conservancy.org/ivad&sz=32" alt="icon">
-    <span class ="title">Hawk Conservancy Trust</span>
-  </a>
-  <a class="link-button" href="https://4vultures.org/about-us" target"_blank"> 
-    <img src="https://www.google.com/s2/favicons?domain=www.4vultures.org/about-us&sz=32" alt="icon">
-    <span class ="title">Vulture Conservation Foundation</span>
-  </a>
+        <!-- Applies the "link subtitle" style to the subtitle text -->
+        <div class="linksubtitle">Vulture Awareness</div>
+        <!-- adds the "link button" style to the hyperlink and the "title" style to the display text -->
+        <a class="link-button" href="https://vultureday.org/" target="_blank">
+            <img src="https://www.google.com/s2/favicons?domain=www.vultureday.org/&sz=32" alt="icon">
+            <span class="title">International Vulture Awareness Day</span>
+        </a>
+        <!-- adds the "link button" style to the hyperlink and the "title" style to the display text -->
+        <a class="link-button" href="https://www.hawk-conservancy.org/ivad" target="_blank">
+            <img src="https://www.google.com/s2/favicons?domain=www.hawk-conservancy.org/ivad&sz=32" alt="icon">
+            <span class="title">Hawk Conservancy Trust</span>
+        </a>
+        <!-- adds the "link button" style to the hyperlink and the "title" style to the display text -->
+        <a class="link-button" href="https://4vultures.org/about-us" target="_blank">
+            <img src="https://www.google.com/s2/favicons?domain=www.4vultures.org/about-us&sz=32" alt="icon">
+            <span class="title">Vulture Conservation Foundation</span>
+        </a>
 
+        <!-- Applies the "link subtitle" style to the subtitle text -->
+        <div class="linksubtitle">Sea Turtle Awareness</div>
+        <!-- adds the "link button" style to the hyperlink and the "title" style to the display text -->
+        <a class="link-button" href="https://savethereef.org/about-reef-save-sunscreen.html" target="_blank">
+            <img src="https://www.google.com/s2/favicons?domain=www.savethereef.org/about-reef-save-sunscreen.html&sz=32" alt="icon">
+            <span class="title">Reef Safe Sunscreen Guide</span>
+        </a>
+        <!-- adds the "link button" style to the hyperlink and the "title" style to the display text -->
+        <a class="link-button" href="https://seaturtleinc.org/learn/" target="_blank">
+            <img src="https://www.google.com/s2/favicons?domain=www.seaturtleinc.org/learn/&sz=32" alt="icon">
+            <span class="title">Sea Turtle Inc.</span>
+        </a>
+        <!-- adds the "link button" style to the hyperlink and the "title" style to the display text -->
+        <a class="link-button" href="https://www.msc.org/en-us/what-we-are-doing/our-approach/the-blue-fish-label" target="_blank">
+            <img src="https://www.google.com/s2/favicons?domain=www.msc.org/en-us/what-we-are-doing/our-approach/the-blue-fish-label&sz=32" alt="icon">
+            <span class="title">Marine Stewardship Council</span>
+        </a>
 
-  <div class="linksubtitle">Sea Turtle Awareness</div>
-  <div id="containerseaturtleawareness"></div>
-  <a class="link-button" href="https://savethereef.org/about-reef-save-sunscreen.html" target"_blank"> 
-    <img src="https://www.google.com/s2/favicons?domain=www.savethereef.org/about-reef-save-sunscreen.html&sz=32" alt="icon">
-    <span class ="title">Reef Safe Sunscreen Guide</span>
-  </a>
-  <a class="link-button" href="https://seaturtleinc.org/learn/" target"_blank"> 
-    <img src="https://www.google.com/s2/favicons?domain=www.seaturtleinc.org/learn/&sz=32" alt="icon">
-    <span class ="title">Sea Turtle Inc.</span>
-  </a>
-  <a class="link-button" href="https://www.msc.org/en-us/what-we-are-doing/our-approach/the-blue-fish-label" target"_blank"> 
-    <img src="https://www.google.com/s2/favicons?domain=www.msc.org/en-us/what-we-are-doing/our-approach/the-blue-fish-label&sz=32" alt="icon">
-    <span class ="title">Marine Stewardship Council</span>
-  </a>
+    </div>
 
-</div>
+    <!-- Opens the script section of the code to pull the goodreads data for the currently reading section-->
+    <script>
+        // defines the goodreads user id constant
+        const GOODREADS_USER_ID = '106774701';
 
+        // finds the currently reading container in the HTML and stores a reference to it so JavaScript can fill it later
+        const containercurrentlyreading = document.getElementById('containercurrentlyreading');
 
+        // defines function that replaces the container contents with a skeleton loading animation
+        function showSkeleton() {
+            containercurrentlyreading.innerHTML = `
+                  <div class="skeleton">
+                    <div style="display:flex;gap:1.25rem;align-items:flex-start">
+                      <div class="skel-line" style="width:80px;height:116px;border-radius:6px;flex-shrink:0"></div>
+                      <div style="flex:1">
+                        <div class="skel-line" style="height:16px;width:60%;margin-bottom:10px"></div>
+                        <div class="skel-line" style="height:22px;width:90%;margin-bottom:6px"></div>
+                        <div class="skel-line" style="height:22px;width:70%;margin-bottom:12px"></div>
+                        <div class="skel-line" style="height:13px;width:40%;margin-bottom:8px"></div>
+                        <div class="skel-line" style="height:3px;width:100%;margin-bottom:16px"></div>
+                        <div class="skel-line" style="height:13px;width:55%"></div>
+                      </div>
+                    </div>
+                  </div>`;
+        }
 
-<script>
-  const GOODREADS_USER_ID = '106774701';
+        // defines function that replaces the container contents with an error card
+        function showError(msg) {
+            containercurrentlyreading.innerHTML = `
+                  <div class="error-card">
+                    <div class="error-icon">📚</div>
+                    <p class="error-title">Couldn't load book</p>
+                    <p class="error-msg">${msg}</p>
+                  </div>`;
+        }
 
-  const containercurrentlyreading = document.getElementById('containercurrentlyreading');
+        //defines function that builds and shows the book card in the currently reading container, by using the "book" object containing the book title, author, cover image and link
+        function showBook(book) {
+            // stores the cover image html so it can be used later and displays the placeholder image if there is an error
+            const coverHtml = book.cover
+                ? `<img class="cover" src="${book.cover}" alt="Cover of ${book.title}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">`
+                : '';
+            // replaces the container contents with the fully built book card by inserting the book data
+            containercurrentlyreading.innerHTML = `
+                  <a class="card" href="${book.link}" target="_blank" rel="noopener">
+                    <div class="cover-wrap">
+                      ${coverHtml}
+                      <div class="cover-placeholder" ${book.cover ? 'style="display:none"' : ''}>📖</div>
+                    </div>
+                    <div class="info">
+                      <div class="reading-tag"><span class="reading-dot"></span>Reading now</div>
+                      <h1 class="title">${book.title}</h1>
+                      <p class="author">by ${book.author}</p>
+                      <p class="progress-label">Progress</p>
+                      <div class="progress-track">
+                        <div class="progress-bar" style="width:45%"></div>
+                      </div>
+                      <p class="cta">View on Goodreads
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M2.5 9.5L9.5 2.5M9.5 2.5H4.5M9.5 2.5V7.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </p>
+                    </div>
+                  </a>`;
+        }
 
-  function showSkeleton() {
-    containercurrentlyreading.innerHTML = `
-      <div class="skeleton">
-        <div style="display:flex;gap:1.25rem;align-items:flex-start">
-          <div class="skel-line" style="width:80px;height:116px;border-radius:6px;flex-shrink:0"></div>
-          <div style="flex:1">
-            <div class="skel-line" style="height:16px;width:60%;margin-bottom:10px"></div>
-            <div class="skel-line" style="height:22px;width:90%;margin-bottom:6px"></div>
-            <div class="skel-line" style="height:22px;width:70%;margin-bottom:12px"></div>
-            <div class="skel-line" style="height:13px;width:40%;margin-bottom:8px"></div>
-            <div class="skel-line" style="height:3px;width:100%;margin-bottom:16px"></div>
-            <div class="skel-line" style="height:13px;width:55%"></div>
-          </div>
-        </div>
-      </div>`;
-  }
+        // defines an async function to load the book data after fetching it from the goodreads site
+        async function loadBook() {
+            // confirms that there is a good reads user id constant assigned, and shows an error if it is not assigned
+            if (GOODREADS_USER_ID === 'YOUR_GOODREADS_USER_ID') {
+                showError('Please replace <code>YOUR_GOODREADS_USER_ID</code> in the script with your actual Goodreads user ID.');
+                return;
+            }
 
-  function showError(msg) {
-    containercurrentlyreading.innerHTML = `
-      <div class="error-card">
-        <div class="error-icon">📚</div>
-        <p class="error-title">Couldn't load book</p>
-        <p class="error-msg">${msg}</p>
-      </div>`;
-  }
+            // shows the skeleton function defined earlier while fetching the goodreads data
+            showSkeleton();
 
-  function showBook(book) {
-    const coverHtml = book.cover
-      ? `<img class="cover" src="${book.cover}" alt="Cover of ${book.title}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">`
-      : '';
+            // adds the goodreads user id to a prewritten url to access the goodreads rss feed for the currently reading shelf
+            const rssUrl = `https://www.goodreads.com/review/list_rss/${GOODREADS_USER_ID}?shelf=currently-reading`;
 
-    containercurrentlyreading.innerHTML = `
-      <a class="card" href="${book.link}" target="_blank" rel="noopener">
-        <div class="cover-wrap">
-          ${coverHtml}
-          <div class="cover-placeholder" ${book.cover ? 'style="display:none"' : ''}>📖</div>
-        </div>
-        <div class="info">
-          <div class="reading-tag"><span class="reading-dot"></span>Reading now</div>
-          <h1 class="title">${book.title}</h1>
-          <p class="author">by ${book.author}</p>
-          <p class="progress-label">Progress</p>
-          <div class="progress-track">
-            <div class="progress-bar" style="width:45%"></div>
-          </div>
-          <p class="cta">View on Goodreads
-            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M2.5 9.5L9.5 2.5M9.5 2.5H4.5M9.5 2.5V7.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </p>
-        </div>
-      </a>`;
-  }
+            // builds a url for a CORS proxy to fetch the RSS (required for browser-side fetching)
+            const proxyUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(rssUrl)}`;
 
-  async function loadBook() {
-    if (GOODREADS_USER_ID === 'YOUR_GOODREADS_USER_ID') {
-      showError('Please replace <code>YOUR_GOODREADS_USER_ID</code> in the script with your actual Goodreads user ID.');
-      return;
-    }
+            // tries to run the code and displays an error message if there is an error
+            try {
+                // makes a request to the proxy url and waits for the response, displays an error if there is an error, and reads the response
+                const res = await fetch(proxyUrl);
+                // if the response is not ok, deliberately triggers an error to be caught by the catch block
+                if (!res.ok) throw new Error(`Network error: ${res.status}`);
+                const data = await res.json();
 
-    showSkeleton();
+                // defines a parser to convert the raw rss text into a format javascript can read (text/xml)
+                const parser = new DOMParser();
+                const xml = parser.parseFromString(data.contents, 'text/xml');
 
-    // Goodreads RSS for currently-reading shelf
-    const rssUrl = `https://www.goodreads.com/review/list_rss/${GOODREADS_USER_ID}?shelf=currently-reading`;
+                // searches the parsed xml document for all "item" elements and shows an error message if the search returns a 0
+                const items = xml.querySelectorAll('item');
+                if (items.length === 0) {
+                    showError(`No books found on your "currently-reading" shelf. Make sure your shelf is public and you have at least one book marked as currently reading on <a class="error-link" href="https://goodreads.com" target="_blank">Goodreads</a>.`);
+                    return;
+                }
 
-    // Use a CORS proxy to fetch the RSS (required for browser-side fetching)
-    // allorigins.win is a free, open-source CORS proxy
-    const proxyUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(rssUrl)}`;
+                // defines item as the most recently added book to the currently reading shelf and grabs the title, link, guid, author name and displays "unknown title"" for a missing title and a blank for other missing elements
+                const item = items[0];
 
-    try {
-      const res = await fetch(proxyUrl);
-      if (!res.ok) throw new Error(`Network error: ${res.status}`);
-      const data = await res.json();
+                const title = item.querySelector('title')?.textContent?.trim() || 'Unknown Title';
+                const link = item.querySelector('link')?.textContent?.trim()
+                    || item.querySelector('guid')?.textContent?.trim()
+                    || `https://www.goodreads.com`;
+                const authorRaw = item.querySelector('author_name')?.textContent?.trim()
+                    || item.querySelector('author')?.textContent?.trim()
+                    || '';
 
-      const parser = new DOMParser();
-      const xml = parser.parseFromString(data.contents, 'text/xml');
+                // assigns the cover image after looking for the book_large_image_url, book_medium_image_url, or img in description
+                let cover = item.querySelector('book_large_image_url')?.textContent?.trim()
+                    || item.querySelector('book_medium_image_url')?.textContent?.trim()
+                    || item.querySelector('book_small_image_url')?.textContent?.trim()
+                    || '';
 
-      const items = xml.querySelectorAll('item');
-      if (items.length === 0) {
-        showError(`No books found on your "currently-reading" shelf. Make sure your shelf is public and you have at least one book marked as currently reading on <a class="error-link" href="https://goodreads.com" target="_blank">Goodreads</a>.`);
-        return;
-      }
+                // if there is no cover this assigns the parsed img src from the description HTML to the cover
+                if (!cover) {
+                    const descHtml = item.querySelector('description')?.textContent || '';
+                    const imgMatch = descHtml.match(/<img[^>]+src=["']([^"']+)["']/i);
+                    if (imgMatch) cover = imgMatch[1];
+                }
 
-      // Take the most recently added book
-      const item = items[0];
+                // cleans up the Goodreads thumbnail to get a larger image
+                if (cover && cover.includes('._SY')) {
+                    cover = cover.replace(/\._SY\d+_/, '._SY300_');
+                }
 
-      const title = item.querySelector('title')?.textContent?.trim() || 'Unknown Title';
-      const link = item.querySelector('link')?.textContent?.trim()
-        || item.querySelector('guid')?.textContent?.trim()
-        || `https://www.goodreads.com`;
-      const authorRaw = item.querySelector('author_name')?.textContent?.trim()
-        || item.querySelector('author')?.textContent?.trim()
-        || '';
+                // shows the book data just fetched
+                showBook({ title, author: authorRaw, cover, link });
 
-      // Cover image: look for book_large_image_url, book_medium_image_url, or img in description
-      let cover = item.querySelector('book_large_image_url')?.textContent?.trim()
-        || item.querySelector('book_medium_image_url')?.textContent?.trim()
-        || item.querySelector('book_small_image_url')?.textContent?.trim()
-        || '';
+            }
+            // if the try block fails the catch runs the error message
+            catch (err) {
+                // logs the error details to browser developer tools for debugging
+                console.error(err);
+                showError(`Couldn't fetch your Goodreads shelf. This may be a temporary network issue — try refreshing. <br><br>If it keeps happening, make sure your Goodreads profile and shelf are set to <strong>public</strong>.`);
+            }
+        }
 
-      // Fallback: parse img src from description HTML
-      if (!cover) {
-        const descHtml = item.querySelector('description')?.textContent || '';
-        const imgMatch = descHtml.match(/<img[^>]+src=["']([^"']+)["']/i);
-        if (imgMatch) cover = imgMatch[1];
-      }
-
-      // Clean up Goodreads thumbnail to get larger image
-      if (cover && cover.includes('._SY')) {
-        cover = cover.replace(/\._SY\d+_/, '._SY300_');
-      }
-
-      showBook({ title, author: authorRaw, cover, link });
-
-    } catch (err) {
-      console.error(err);
-      showError(`Couldn't fetch your Goodreads shelf. This may be a temporary network issue — try refreshing. <br><br>If it keeps happening, make sure your Goodreads profile and shelf are set to <strong>public</strong>.`);
-    }
-  }
-
-  loadBook();
-</script>
+        // runs the load book function
+        loadBook();
+    </script>
 </body>
 </html>
