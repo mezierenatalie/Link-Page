@@ -1,4 +1,4 @@
-About: A personal link-in-bio page built as a first coding project and commented to aid in learning HTML, CSS and JavaScript.
+About: A personal link-in-bio page built as a beginner coding project and commented to aid in learning HTML, CSS and JavaScript.
 
 Project Name: Natalie's Link Page
 
