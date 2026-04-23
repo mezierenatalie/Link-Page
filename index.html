@@ -4,7 +4,7 @@
 <!-- Sets the page language to english, and is important for screen readers -->
 <html lang="en">
 
-<!-- Opens the head section of the code, it is behind the scenes instructinos for the browser -->
+<!-- Opens the head section of the code, it is behind the scenes instructinos for the browser and includes the style section of the code-->
 <head>
 
 <!-- Sets the character set to the default UTF-8 so that none of the text characters display as weird symbols -->
@@ -37,11 +37,11 @@
     --cardbg: #ffffff; /*white*/
     --border: #3d292f; /*dark grey crimson*/
     /*layers two shadow boxes on top of eachother to make a shadow gradient, used on card and button elements using "var(--shadow)"*/
-    --shadow: 0 2px 24px rgba(26,22,18,0.08) /*0 horizontal offset, 2px offset down, 24px shadow width, the larger the number the softer the shadow, at 8% opacity*/
-    , 0 1px 4px rgba(26,22,18,0.06) /*0 horizontal offset, 1px offset down, 4px shadow width, at 6% opacity*/;
+    --shadow: 0 2px 24px rgba(26,22,18,0.08) /*0 horizontal offset, 2px offset down, 24px shadow width, the larger the number the softer the shadow, at 8% opacity*/,
+    0 1px 4px rgba(26,22,18,0.06) /*0 horizontal offset, 1px offset down, 4px shadow width, at 6% opacity*/;
   }
 
-  /* Uses stored CSS variables and applies them to the whole page*/
+    /* Uses stored CSS variables and applies them to the whole page*/
     body {
         font-family: 'Genty Sans'; /*sets the font to "Genty Sans"*/
         background: var(--bgcolor); /*sets the background page color to "bgcolor" (light red)*/
@@ -55,100 +55,116 @@
         background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%233d292f' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
     }
 
+   /* Uses stored CSS variables and applies them to the "wrapper"*/
   .wrapper {
-    width: 100%;
+    /*sets the width to 100% of the max width (420px)*/
+    width: 100%; 
     max-width: 420px;
   }
 
+   /* Uses stored CSS variables and applies them to the "link subtitle" text*/
   .linksubtitle {
-    font-family: 'Genty Sans';
-    font-size: 20px;
-    font-weight: 500;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--maintextcolor);
-    text-align: center;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    font-family: 'Genty Sans'; /*sets the font to "Genty Sans"*/
+    font-size: 20px; /*sets the font height to 20px*/
+    font-weight: 500; /*sets the font width to 500*/
+    letter-spacing: 0.18em; /*sets the spacing between letters to 0.18em which is scaleable based on font size*/
+    text-transform: uppercase; /*changes the text to be all uppercase*/
+    color: var(--maintextcolor); /*sets the text color to "maintextcolor" (dark grey crimson*/
+    text-align: center; /*centers the text horizontially*/
+    margin-bottom: 1rem; /*adds 1rem (scaleable with font size) of margin below the text*/
+    margin-top: 1rem; /*adds 1rem (scaleable with font size) of margin above the text*/
+    display: flex; /*sets the display to a flex box so you can control how child elements are arrranged inside the body*/
+    align-items: center; /*centers content horizontally*/
+    gap: 10px; /*adds a gap of 10 px before and after the subtitle text*/
   }
 
+   /* Uses stored CSS variables and applies them before and after the "link subtitle" text*/
   .linksubtitle::before, .linksubtitle::after {
-    content: '';
-    flex: 1;
-    height: 2px;
-    background: var(--border);
+    content: ''; /*indicates that there is conent to show*/
+    flex: 1; /*tells the flex display to fill the space evenly on both sides of the text with the content*/
+    height: 2px; /*sets the height of the content to 2px*/
+    background: var(--border); /*sets the color to "border" (dark grey crimson)*/
   }
 
-  /* ── loading state ── */
+  /* ── loading state style ── */
+   /* Uses stored CSS variables and applies them to a skeleton variable to show while information is loading*/
   .skeleton {
-    background: var(--cardbg);
-    border-radius: 16px;
-    padding: 1.75rem;
-    box-shadow: var(--shadow);
-    border: 0.5px solid var(--border);
+    background: var(--cardbg); /*sets the skeleton card backround to "cardbg" (white)*/
+    border-radius: 16px; /*sets the skeleton card border radius to 16px*/
+    padding: 1.75rem; /*adds 1.75rem (scaleable with font size) of padding in the skeleton card*/
+    box-shadow: var(--shadow); /*adds the shadow style variable to the skeleton card*/
+    border: 0.5px solid var(--border); /*adds a 0.5px solid border to the skeleton card using "border" color (dark grey crimson)*/
   }
+
+    /* Uses stored CSS variables and applies them to a skeleton line variable to animate while information is loading*/
   .skel-line {
-    background: linear-gradient(90deg, #ede9e4 25%, #f5f2ef 50%, #ede9e4 75%);
-    background-size: 200% 100%;
-    animation: shimmer 1.4s infinite;
-    border-radius: 4px;
+    background: linear-gradient(90deg, #ede9e4 25%, #f5f2ef 50%, #ede9e4 75%); /*sets the skeleton line backround color to a linear gradient of different light grey colors at different opacities*/
+    background-size: 200% 100%; /*sets the size of the skeleton line content*/
+    animation: shimmer 1.4s infinite; /*adds a shimmer animation that loops every 1.4s and never stops to indicate "loading" content*/
+    border-radius: 4px; /*sets the skeleton line border radius to 4px*/
   }
-  @keyframes shimmer { to { background-position: -200% 0; } }
+  @keyframes shimmer { to { background-position: -200% 0; } } /*adds the shimmer animation frames*/
 
-  /* ── book card ── */
+  /* ── book card style ── */
+   /* Uses stored CSS variables and applies them to the book card*/
   .card {
-    background: var(--cardbg);
-    border-radius: 16px;
-    padding: 1.75rem;
-    box-shadow: var(--shadow);
-    border: 0.5px solid var(--border);
-    display: flex;
-    gap: 1.25rem;
-    align-items: flex-start;
-    opacity: 0;
-    transform: translateY(12px);
-    animation: fadeUp 0.5s ease forwards;
-    text-decoration: none;
-    color: inherit;
-    transition: box-shadow 0.2s, transform 0.2s;
+    background: var(--cardbg); /*sets the book card background to "cardbg" (white)*/
+    border-radius: 16px; /*sets the card border radius to 16px*/
+    padding: 1.75rem; /*adds 1.75rem (scaleable with font size) of padding in the book card*/
+    box-shadow: var(--shadow); /*adds the shadow style variable to the book card*/
+    border: 0.5px solid var(--border); /*adds a 0.5px solid border to the book card using "border" color (dark grey crimson)*/
+    display: flex; /*sets the display to a flex box so you can control how child elements are arrranged inside the card*/
+    gap: 1.25rem; /*adds a gap of 1.25rem (scaleable with font size) to the book card*/
+    align-items: flex-start; /*aligns content horizontally to the right*/
+    opacity: 0; /*sets the opacity of the card to 0, makes the card solid*/
+    transform: translateY(12px); /*moves the card along the y axis by 12px*/
+    animation: fadeUp 0.5s ease forwards; /*adds an animation to the book card so it takes 0.5s to fade up on the screen and ease forward*/
+    text-decoration: none; /*sets the text decoration to none. This removes defaults like hyperlink lines*/
+    color: inherit; /*uses text color from the parent element*/
+    transition: box-shadow 0.2s, transform 0.2s; /*adds animation to the book card shadow*/
   }
 
-  .card:hover {
-    box-shadow: 0 6px 32px rgba(26,22,18,0.13), 0 2px 6px rgba(26,22,18,0.08);
-    transform: translateY(-2px);
-  }
-  @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+   /* Uses stored CSS variables and applies them to the book card when it is hovered over*/
+    .card:hover {
+        box-shadow: 0 6px 32px rgba(26,22,18,0.13), 0 2px 6px rgba(26,22,18,0.08); /*increases the shadow size and opacity when hovered over to make the card appear to lift off the page*/
+        transform: translateY(-2px); /*moves the card 2px upward when hovered over to make the card appear to lift off the page*/
+    }
+  @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } } /*adds the fadeup animation frames*/
 
+   /*addcomment*/
   .cover-wrap {
-    flex-shrink: 0;
-    position: relative;
+    flex-shrink: 0; /*prevents the cover image container from shrinking if space gets tight, keeps the book cover always the same size*/
+    position: relative; /*sets the positioning context for any child elements that might need to be positioned absolutely inside it*/
   }
 
-  .cover {
-    width: 110px;
-    height: 170px;
-    object-fit: cover;
-    border-radius: 6px;
-    display: block;
-    box-shadow: 3px 3px 6px rgba(26,22,18,0.18), -1px 0 0 rgba(26,22,18,0.08);
-  }
+   /* Uses stored CSS variables and applies them to the book cover image*/
+    .cover {
+        width: 110px; /*sets the cover image width to 110px*/
+        height: 170px; /*sets the cover image height to 170px*/
+        object-fit: cover; /*scales the image to fill its set dimensions (110px x 170px) without stretching or distorting it, crops if necessary*/
+        border-radius: 6px; /*sets the cover image border radius to 6px*/
+        display: block; /*sets the display to a block box*/
+        /*layers two shadow boxes on top of eachother to make a shadow gradient, used on card and button elements using "var(--shadow)"*/
+        box-shadow: 3px 3px 6px rgba(26,22,18,0.18) /*3px horizontal offset, 3px offset down, 6px shadow width, the larger the number the softer the shadow, at 18% opacity*/, -1px 0 0 rgba(26,22,18,0.08) /*-1px horizontal offset, 0px offset down, 0px shadow width, the larger the number the softer the shadow, at 8% opacity*/;
+    }
 
+   /* Uses stored CSS variables and applies them to the book cover placeholder*/
   .cover-placeholder {
-    width: 110px;
-    height: 170px;
-    background: var(--accentcolor);
-    border-radius: 6px;
-    display: flex;
+    width: 110px; /*sets the cover placeholder width to 110px*/
+    height: 170px; /*sets the cover placeholder height to 170px*/
+    background: var(--accentcolor); /*sets the cover placeholder color to "accentcolor" (grey crimson)*/
+    border-radius: 6px; /*sets the cover placeholder border radius to 6px*/
+    display: flex; /*sets the display to a flex box so you can control how child elements are arrranged inside the cover placeholder*/
+    /*centers content on the horizontal (align-items) and vertical (justify-content) axises*/
     align-items: center;
     justify-content: center;
-    font-size: 28px;
+    font-size: 28px; /*sets the font height to 28px*/
   }
 
-  .info { flex: 1; min-width: 0; }
+   /* Uses stored CSS variables and applies them to the info in the book card*/
+  .info { flex: 1; min-width: 0; } /*lets the info section grow to fill remaining space after the book cover and prevents the text from overflowing outside the card for long titles*/
 
+    /* Uses stored CSS variables and applies them to the reading tag in the book card*/
   .reading-tag {
     display: inline-flex;
     align-items: center;

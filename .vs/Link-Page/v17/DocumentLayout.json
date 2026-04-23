@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\natal\\source\\repos\\mezierenatalie\\Link-Page\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\natal\\source\\repos\\mezierenatalie\\Link-Page\\Natalie\u0027s Links.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Natalie\u0027s Links.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\natal\\source\\repos\\mezierenatalie\\Link-Page\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,19 +14,23 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Natalie\u0027s Links.html",
-              "DocumentMoniker": "C:\\Users\\natal\\source\\repos\\mezierenatalie\\Link-Page\\Natalie\u0027s Links.html",
-              "RelativeDocumentMoniker": "Natalie\u0027s Links.html",
-              "ToolTip": "C:\\Users\\natal\\source\\repos\\mezierenatalie\\Link-Page\\Natalie\u0027s Links.html",
-              "RelativeToolTip": "Natalie\u0027s Links.html",
-              "ViewState": "AgIAALkBAAAAAAAAAAAAADUAAADTAAAAAAAAAA==",
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Users\\natal\\source\\repos\\mezierenatalie\\Link-Page\\index.html",
+              "RelativeDocumentMoniker": "index.html",
+              "ToolTip": "C:\\Users\\natal\\source\\repos\\mezierenatalie\\Link-Page\\index.html",
+              "RelativeToolTip": "index.html",
+              "ViewState": "AgIAAIEAAAAAAAAAAAAAAKgAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2026-04-23T15:07:36.184Z",
+              "WhenOpened": "2026-04-23T16:30:33.738Z",
               "EditorCaption": ""
             }
           ]
