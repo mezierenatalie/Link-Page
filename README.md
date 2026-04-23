@@ -1,8 +1,8 @@
-About: A personal link-in-bio page built as a beginner coding project and commented to aid in learning HTML, CSS and JavaScript.
+About: A customizable link-in-bio page built as a beginner coding project and commented to aid in learning HTML, CSS and JavaScript. Meant to replace my "Linktree" in my Instagram bio. 
 
-Project Name: Natalie's Link Page
+Project Name: Natalie's Custom Link Page
 
-Project Description: static web page to display multiple custom links including an automatically updating "currently reading" widget.
+Project Description: static web page that displays multiple custom links and an automatically updating "currently reading" widget using Goodreadss RSS.
 
 Link: https://mezierenatalie.github.io/Link-Page/
 
