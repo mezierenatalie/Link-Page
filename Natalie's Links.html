@@ -1,36 +1,59 @@
+<!-- Sets the document type to an html file, and must be the first line of code -->
 <!DOCTYPE html>
+
+<!-- Sets the page language to english, and is important for screen readers -->
 <html lang="en">
+
+<!-- Opens the head section of the code, it is behind the scenes instructinos for the browser -->
 <head>
+
+<!-- Sets the character set to the default UTF-8 so that none of the text characters display as weird symbols -->
 <meta charset="UTF-8">
+
+<!-- Makes the page responsive on mobile and auto fits the page to the devices width -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Page title that displays on the browser tab -->
 <title>Natalie's Links</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- Preconnects to the font server so that the fonts can load faster -->
+<link rel="preconnect" href="https://db.onlinewebfonts.com">
+
+<!-- Loads the font "Genty Sans" from the font server -->
 <link href="https://db.onlinewebfonts.com/c/fea031a5eb1f633a622138fe25624d42?family=Genty+Sans" rel="stylesheet">
+
+<!-- Opens the style section of the code, this sets the design elements for the web page -->
 <style>
+    /* Resets "*" everything  on the page, everything in ::before, and ::after. Makes the box sizing consistent by forcing padding to be added inside the elements set width. Then changes margin and padding to "0" to remove any page defaults*/
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+  /* Stores CSS variables for the whole page and is accessed using "var(--nameofvariable)"*/
   :root {
-    --bgcolor: #f6dfe2;
-    --maintextcolor: #3d292f;
-    --textcolor: #ffffff;
-    --indicatorcolor: #ffffff;
-    --accentcolor: #754f5b;
-    --cardbg: #ffffff;
-    --border: #3d292f;
-    --shadow: 0 2px 24px rgba(26,22,18,0.08), 0 1px 4px rgba(26,22,18,0.06);
+    --bgcolor: #f6dfe2; /*light red*/
+    --maintextcolor: #3d292f; /*dark grey crimson*/
+    --textcolor: #ffffff; /*white*/
+    --indicatorcolor: #ffffff; /*white*/
+    --accentcolor: #754f5b; /*grey crimson*/
+    --cardbg: #ffffff; /*white*/
+    --border: #3d292f; /*dark grey crimson*/
+    /*layers two shadow boxes on top of eachother to make a shadow gradient, used on card and button elements using "var(--shadow)"*/
+    --shadow: 0 2px 24px rgba(26,22,18,0.08) /*0 horizontal offset, 2px offset down, 24px shadow width, the larger the number the softer the shadow, at 8% opacity*/
+    , 0 1px 4px rgba(26,22,18,0.06) /*0 horizontal offset, 1px offset down, 4px shadow width, at 6% opacity*/;
   }
 
-  body {
-    font-family: 'Genty Sans';
-    background: var(--bgcolor);
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem 1.25rem;
-    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%238a7968' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-  }
+  /* Uses stored CSS variables and applies them to the whole page*/
+    body {
+        font-family: 'Genty Sans'; /*sets the font to "Genty Sans"*/
+        background: var(--bgcolor); /*sets the background page color to "bgcolor" (light red)*/
+        min-height: 100vh; /*sets the minimium height to 100% of the screen height (viewport hieght)*/
+        display: flex; /*sets the display to a flex box so you can control how child elements are arrranged inside the body*/
+        /*centers content on the horizontal (align-items) and vertical (justify-content) axises*/
+        align-items: center;
+        justify-content: center;
+        padding: 2rem 1.25rem; /*sets top/bottom padding to 2rem, and left/right padding to 1.25rem. rem is scalable based on font size*/
+        /*adds a repeating geometric pattern to the page background, the pattern tile is 60px x 60px and repeats across the page. Sets the color of the geometric pattern to #3d292f (%23=#), and the opacity to 5%*/
+        background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%233d292f' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
 
   .wrapper {
     width: 100%;
@@ -253,6 +276,7 @@
 
 </style>
 </head>
+
 <body>
 <div class="wrapper">
   <div class="linksubtitle">Currently reading</div>
