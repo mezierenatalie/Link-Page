@@ -4,7 +4,7 @@ Project Name: Natalie's Custom Link Page
 
 Project Description: static web page that displays multiple custom links and an automatically updating "currently reading" widget using Goodreadss RSS.
 
-Link: https://mezierenatalie.github.io/Link-Page/
+Link: https://mezierenatalie.github.io/Custom-Link-Page/
 
 Features: 
 * Auto-updating "currently reading" widget using Goodreads RSS
