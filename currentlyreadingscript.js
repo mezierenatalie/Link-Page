@@ -136,5 +136,4 @@ async function loadBook() {
 }
 
 // runs the load book function
->>>>>>> 81a646b122baf02612c60f8b5fbbbd1fa001b95c
 loadBook();
