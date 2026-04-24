@@ -1,0 +1,174 @@
+﻿/*Overrides styles from the "linkpagestyles.css" that are different and applies them to the whole page*/
+body {
+    align-items: flex-start; /*overrides the vertical centering and starts content at the top*/
+    flex-direction: column; /*stacks elements vertically instead of side by side*/
+    padding: 0; /*removes the left and right padding from linkpagestyles.css so the navbar goes edge to edge*/
+    margin: 0; /*removes any default browser margin at the top of the page*/
+    justify-content: flex-start; /*overrides the vertical centering from linkpagestyles.css*/
+}
+
+/*styles the navigation bar*/
+.navbar {
+    background: var(--cardbg); /*sets the book card background to "cardbg" (white)*/
+    display: flex; /*sets the display to a flex box so you can control how child elements are arranged inside the card*/
+    align-items: center; /*center aligns items*/
+    justify-content: space-between;
+    box-shadow: 0 2px 8px rgba(26,22,18,0.1); /* adds a soft shadow under the navbar instead of a border line */
+    position: sticky;
+    top: 0;
+    width: 100%; /*sets the navbar width to 100% of the page width*/
+    padding: 0 1.25rem; /*adds internal padding so the back button and title aren't flush against the edges*/
+}
+
+/* overrides the wrapper max width to be wider on the commissions page */
+.wrapper {
+    max-width: 1600px; /*sets sets the wrapper max width to 1600px*/
+    width: 100%; /*sets the sets the wrapper width to 100%*/
+    padding: 0 1.25rem; /*adds back the left and right padding just for the wrapper content*/
+    align-self: center; /*centers the wrapper horizontally on the page */
+}
+
+/* styles the back button */
+.back-button {
+    padding: 0.75rem; /*adds 1.75rem (scalable with font size) of padding in the link button*/
+    display: flex; /*sets the display to a flex box so you can control how child elements are arranged inside the card*/
+    gap: 1.25rem; /*adds a gap of 1.25rem (scalable with font size) to the link button*/
+    text-decoration: none; /*sets the text decoration to none. This removes defaults like hyperlink lines*/
+    margin-bottom: 0.5rem; /*adds 0.5rem (scalable with font size) of margin below the text*/
+    margin-top: 0.5rem; /*adds 0.5rem (scalable with font size) of margin above the text*/
+    justify-content: start;
+    width: 6rem; /*sets the back button width to 6rem*/
+    color: var(--maintextcolor); /*sets the text color to "maintextcolor" (dark grey crimson)*/
+}
+
+/* styles the disclaimer text */
+.disclaimer {
+    background: var(--accentcolor); /*sets the link button background to "cardbg" (white)*/
+    border-radius: 16px; /*sets the link button border radius to 16px*/
+    padding: 1.25rem; /*adds 1.75rem (scalable with font size) of padding in the link button*/
+    box-shadow: var(--shadow); /*adds the shadow style variable to the link button*/
+    border: 0.5px solid var(--border); /*adds a 0.5px solid border to the link button using "border" color (dark grey crimson)*/
+    margin-bottom: 0.5rem; /*adds 0.5rem (scalable with font size) of margin below the text*/
+    margin-top: 0.5rem; /*adds 0.5rem (scalable with font size) of margin above the text*/
+    font-size: 0.9rem; /*sets the font height to 13px*/
+    color: var(--textcolor); /*sets the text color to "maintextcolor" (dark grey crimson)*/
+    font-weight: 400; /*sets the font width to 400*/
+}
+
+.portfolio-section {
+    background: var(--cardbg); /*sets the link button background to "cardbg" (white)*/
+    border-radius: 16px; /*sets the link button border radius to 16px*/
+    padding: 1.25rem; /*adds 1.75rem (scalable with font size) of padding in the link button*/
+    box-shadow: var(--shadow); /*adds the shadow style variable to the link button*/
+    border: 0.5px solid var(--border); /*adds a 0.5px solid border to the link button using "border" color (dark grey crimson)*/
+    margin-bottom: 0.5rem; /*adds 0.5rem (scalable with font size) of margin below the text*/
+    margin-top: 0.5rem; /*adds 0.5rem (scalable with font size) of margin above the text*/
+}
+
+.carousel-type-label {
+    font-family: 'Genty Sans'; /*sets the font to "Genty Sans"*/
+    font-size: 1.2rem; /*sets the font height to 1.2rem*/
+    font-weight: 600; /*sets the font width to 600*/
+    color: var(--maintextcolor); /*sets the text color to "maintextcolor" (dark grey crimson)*/
+    margin-bottom: 0.4rem; /*adds 0.5rem (scalable with font size) of margin below the text*/
+}
+
+.commission-badge {
+    display: inline-flex; /*sets the display to a flex box so you can control how child elements are arranged inside the reading tag*/
+    align-items: center; /*center aligns items*/
+    font-size: 10px; /*sets the font height to 20px*/
+    font-weight: 500; /*sets the font width to 500*/
+    letter-spacing: 0.1em; /*sets the spacing between letters to 0.18em which is scalable based on font size*/
+    text-transform: uppercase; /*changes the text to be all uppercase*/
+    color: var(--textcolor); /*sets the text color to textcolor (white)*/
+    background: var(--accentcolor); /*sets the badge background to accentcolor (grey crimson)*/
+    padding: 3px 9px; /*sets top/bottom padding to 3px, and left/right padding to 9px*/
+    border-radius: 99px; /*sets the badge border radius to 99px making it a pill shape*/
+    margin-bottom: 0.75rem; /*adds 0.5rem (scalable with font size) of margin below the text*/
+}
+
+.carousel {
+    display: flex; /*sets the display to a flex box so you can control how child elements are arranged inside the card*/
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 0.75rem; /*adds a gap of 5px to the reading tag*/
+    scrollbar-width: none;
+    scroll-padding-left: 0;
+    padding-left: 0;
+}
+
+.carousel::-webkit-scrollbar {
+        display: none;
+}
+
+.carousel-img {
+    height: 320px; /*sets the carousel-img height to 280px*/
+    width: auto; /*sets the carousel image width to scale naturally with the height*/
+    flex-shrink: 0;
+    border-radius: 10px; /*sets the carousel image border radius to 10px*/
+    scroll-snap-align: start;
+    object-fit: cover;
+    cursor: grab;
+    border: 5px solid var(--accentcolor);
+    scroll-snap-stop: always;
+}
+
+.carousel-img:active {
+    cursor: grabbing;
+}
+
+/* styles the whitespace gap between commission categories */
+.carousel-divider {
+    flex-shrink: 0;
+    width: 16rem;
+}
+
+.carousel-bubbles {
+    display: flex; /*sets the display to a flex box so you can control how child elements are arranged inside the card*/
+    justify-content: center;
+    gap: 6px; /*adds a gap of 5px to the reading tag*/
+    margin-top: 0.75rem; /*adds 1rem (scalable with font size) of margin above the text*/
+    flex-wrap: wrap;
+}
+
+.carousel-bubble {
+    width: 8px; /*sets the bubble width to 8px*/
+    height: 8px; /*sets the bubble height to 8px*/
+    border-radius: 50%; /*sets the bubble border radius to 50% making it a circle*/
+    background: var(--accentcolor); /*sets the bubble color to accentcolor (grey crimson)*/
+    opacity: 0.3;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    border: none;
+    padding: 0;
+}
+
+/* styles the larger bubble that marks the start of a new category */
+.carousel-bubble.category-start {
+    width: 12px;
+    height: 12px;
+    border-radius: 99px;
+}
+
+.carousel-bubble.active {
+    opacity: 1;
+}
+
+/* styles the google form container */
+.form-container {
+    background: var(--cardbg);
+    border-radius: 16px;
+    padding: 1.25rem;
+    box-shadow: var(--shadow);
+    border: 0.5px solid var(--border);
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+}
+
+/* styles the embedded google form iframe */
+.form-container iframe {
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+}

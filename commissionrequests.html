@@ -1,0 +1,120 @@
+﻿<!-- Sets the document type to an html file, and must be the first line of code -->
+<!DOCTYPE html>
+
+<!-- Sets the page language to english, and is important for screen readers -->
+<html lang="en">
+
+<!-- Opens the head section of the code, it is behind the scenes instructions for the browser and includes the style section of the code-->
+<head>
+
+    <!-- Sets the character set to the default UTF-8 so that none of the text characters display as weird symbols -->
+    <meta charset="UTF-8">
+
+    <!-- Makes the page responsive on mobile and auto fits the page to the devices width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Page title that displays on the browser tab -->
+    <title>Commission Request</title>
+
+    <!-- Preconnects to the font server so that the fonts can load faster -->
+    <link rel="preconnect" href="https://db.onlinewebfonts.com">
+
+    <!-- Loads the font "Genty Sans" from the font server -->
+    <link href="https://db.onlinewebfonts.com/c/fea031a5eb1f633a622138fe25624d42?family=Genty+Sans" rel="stylesheet">
+
+    <!-- Links to stylesheet "linkpagesstyles.css" -->
+    <link rel="stylesheet" href="linkpagestyles.css">
+
+    <!-- Links to stylesheet "commissionsstyles.css" -->
+    <link rel="stylesheet" href="commissionrequeststyles.css">
+
+    <!-- Links to javascript "commisionrequestscript.js" -->
+    <script src="commisionrequestscript.js" defer></script>
+</head>
+<!-- Opens the body section of the code-->
+<body>
+    <!-- navigation bar at the top of the page -->
+    <nav class="navbar">
+        <!-- back button that links to the main link page -->
+        <a class="back-button" href="index.html">Back</a>
+        <!-- empty div to balance the flexbox spacing -->
+        <div class="navbar-spacer"></div>
+    </nav>
+
+    <div class="wrapper">
+        <!-- portfolio section -->
+        <div class="linksubtitle">Past Commissions</div>
+
+        <!-- portfolio carousel -->
+        <div class="portfolio-section">
+            <!-- subheader that updates as you scroll -->
+            <div class="carousel-type-label">Postcard Paintings</div>
+
+            <!-- price and timeline badge -->
+            <div class="commission-badge">$20 - $40 · 3-5 days</div>
+
+            <!-- carousel container -->
+            <div class="carousel" id="portfolio-carousel">
+                <!-- postcard painting photos -->
+                <img class="carousel-img" src="images/brusselspostcard.jpg" alt="Postcard painting" data-type="Postcard Paintings" data-badge="$20 - $40 · 3-5 days">
+                <img class="carousel-img" src="images/budapestpostcard.jpg" alt="Postcard painting" data-type="Postcard Paintings" data-badge="$20 - $40 · 3-5 days">
+                <img class="carousel-img" src="images/catpainting.jpg" alt="Postcard painting" data-type="Postcard Paintings" data-badge="$20 - $40 · 3-5 days">
+                <img class="carousel-img" src="images/costaricapostcard.jpg" alt="Postcard painting" data-type="Postcard Paintings" data-badge="$20 - $40 · 3-5 days">
+                <img class="carousel-img" src="images/frankfurtpostcard.jpg" alt="Postcard painting" data-type="Postcard Paintings" data-badge="$20 - $40 · 3-5 days">
+                <img class="carousel-img" src="images/londonpostcard.jpg" alt="Postcard painting" data-type="Postcard Paintings" data-badge="$20 - $40 · 3-5 days">
+                <img class="carousel-img" src="images/riverpostcard.jpg" alt="Postcard painting" data-type="Postcard Paintings" data-badge="$20 - $40 · 3-5 days">
+                <div class="carousel-divider"></div>
+                <!-- embroidery photos -->
+                <img class="carousel-img" src="images/frontshoeflowerembroidery.png" alt="Embroidery" data-type="Embroidery" data-badge="$5 - $50 · 2-10 days">
+                <img class="carousel-img" src="images/backshoeflowerembroidery.png" alt="Embroidery" data-type="Embroidery" data-badge="$5 - $50 · 2-10 days">
+                <img class="carousel-img" src="images/coupleoutlineembroideryhoop.png" alt="Embroidery" data-type="Embroidery" data-badge="$5 - $50 · 2-10 days">
+                <img class="carousel-img" src="images/traderhoesembroiderybag.png" alt="Embroidery" data-type="Embroidery" data-badge="$5 - $50 · 2-10 days">
+                <img class="carousel-img" src="images/traderhoesembroiderypatch.png" alt="Embroidery" data-type="Embroidery" data-badge="$5 - $50 · 2-10 days">
+                <div class="carousel-divider"></div>
+                <!-- cross stitch photos -->
+                <img class="carousel-img" src="images/duckcrossstitch.jpeg" alt="Cross Stitch" data-type="Cross Stitch" data-badge="$10 - $60 · 3-10 days">
+                <img class="carousel-img" src="images/greenandwhitebirdcrossstitch.jpg" alt="Cross Stitch" data-type="Cross Stitch" data-badge="$10 - $60 · 3-10 days">
+                <img class="carousel-img" src="images/outerwildscrossstitch.jpg" alt="Cross Stitch" data-type="Cross Stitch" data-badge="$10 - $60 · 3-10 days">
+                <img class="carousel-img" src="images/yellowbirdcrossstitchhoop.jpg" alt="Cross Stitch" data-type="Cross Stitch" data-badge="$10 - $60 · 3-10 days">
+                <img class="carousel-img" src="images/yellowbirdcrossstitch.jpg" alt="Cross Stitch" data-type="Cross Stitch" data-badge="$10 - $60 · 3-10 days">
+                <img class="carousel-img" src="images/butterflycrossstitch.png" alt="Cross Stitch" data-type="Cross Stitch" data-badge="$10 - $60 · 3-10 days">
+                <img class="carousel-img" src="images/pigeoncrossstitch.png" alt="Cross Stitch" data-type="Cross Stitch" data-badge="$10 - $60 · 3-10 days">
+                <div class="carousel-divider"></div>
+                <!-- sewing photos -->
+                <img class="carousel-img" src="images/blanketsewing.png" alt="Sewing" data-type="Sewing" data-badge="$5 - $50 · 2-10 days">
+                <img class="carousel-img" src="images/reuseabletowlsewing.png" alt="Sewing" data-type="Sewing" data-badge="$5 - $50 · 2-10 days">
+                <img class="carousel-img" src="images/ricehandwarmersewing.png" alt="Sewing" data-type="Sewing" data-badge="$5 - $50 · 2-10 days">
+                <div class="carousel-divider"></div>
+                <!-- crochet photos -->
+                <img class="carousel-img" src="images/bearcrochet.jpg" alt="Crochet" data-type="Crochet" data-badge="$20 - $100 · 5-15 days">
+                <img class="carousel-img" src="images/crochetscrunchies.jpg" alt="Crochet" data-type="Crochet" data-badge="$20 - $100 · 5-15 days">
+                <img class="carousel-img" src="images/flowercrochetbag.jpg" alt="Crochet" data-type="Crochet" data-badge="$20 - $100 · 5-15 days">
+                <img class="carousel-img" src="images/stingraycrochet.jpg" alt="Crochet" data-type="Crochet" data-badge="$20 - $100 · 5-15 days">
+                <img class="carousel-img" src="images/citruscrochet.png" alt="Crochet" data-type="Crochet" data-badge="$20 - $100 · 5-15 days">
+                <img class="carousel-img" src="images/dollcrochet.png" alt="Crochet" data-type="Crochet" data-badge="$20 - $100 · 5-15 days">
+                <img class="carousel-img" src="images/fruitbagcrochet.png" alt="Crochet" data-type="Crochet" data-badge="$20 - $100 · 5-15 days">
+                <img class="carousel-img" src="images/kindlecovercrochet.png" alt="Crochet" data-type="Crochet" data-badge="$20 - $100 · 5-15 days">
+                <img class="carousel-img" src="images/lemoncrochet.png" alt="Crochet" data-type="Crochet" data-badge="$20 - $100 · 5-15 days">
+                <img class="carousel-img" src="images/littleguyplushcrochet.png" alt="Crochet" data-type="Crochet" data-badge="$20 - $100 · 5-15 days">
+                <img class="carousel-img" src="images/strawberrycrochet.png" alt="Crochet" data-type="Crochet" data-badge="$20 - $100 · 5-15 days">
+                <img class="carousel-img" src="images/watermeloncrochet.png" alt="Crochet" data-type="Crochet" data-badge="$20 - $100 · 5-15 days">
+                <div class="carousel-divider"></div>
+            </div>
+
+            <!-- bubble indicators -->
+            <div class="carousel-bubbles" id="carousel-bubbles"></div>
+        </div>
+
+        <!-- disclaimer text -->
+        <p class="disclaimer">Fill out the form below to start a project conversation! Submitting this form is a commission request, not a guarantee of acceptance. I will follow up within 7 days to discuss your project.</p>
+        
+    <!-- commission request form section -->
+        <div class="linksubtitle">Request a Commission</div>
+
+        <!-- embedded google form -->
+        <div class="form-container">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScLcMRVJsEPXpi_jzH5mPtGKnJyCviA_RR9C4_Uc3087xtIFg/viewform?embedded=true" width="640" height="1355" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        </div>
+    </div>
+</body>
+</html>
