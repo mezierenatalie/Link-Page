@@ -63,6 +63,10 @@ body {
     background: var(--border); /*sets the color to "border" (dark grey crimson)*/
 }
 
+.logoicon{
+    width: 32px;
+    height: 32px;
+}
 /* ── loading state style ── */
 /* Uses stored CSS variables and applies them to a skeleton variable to show while information is loading*/
 .skeleton {
